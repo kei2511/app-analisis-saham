@@ -1,77 +1,78 @@
 # Stock Swing Trader
 
-Stock Swing Trader is a comprehensive technical and fundamental analysis tool designed to assist traders in making informed decisions. Built with Python and Streamlit, this application provides multi-timeframe analysis, consensus-based trading signals, and machine learning predictions for stock price movements.
+Stock Swing Trader adalah alat analisis teknikal dan fundamental komprehensif yang dirancang untuk membantu trader dalam mengambil keputusan yang tepat. Dibangun menggunakan Python dan Streamlit, aplikasi ini menyediakan analisis multi-timeframe, sinyal perdagangan berbasis konsensus, dan prediksi machine learning untuk pergerakan harga saham.
 
-## Features
+## Fitur
 
-### 1. Multi-Timeframe Analysis
-The application analyzes stock data across three distinct timeframes to identify trend alignment:
-- **1 Hour (1h)**: For short-term momentum and entry precision.
-- **Daily (1d)**: For the primary trend and swing trading setup.
-- **Weekly (1wk)**: For long-term trend confirmation.
+### 1. Analisis Multi-Timeframe
+Aplikasi ini menganalisis data saham di tiga kerangka waktu (timeframe) berbeda untuk mengidentifikasi keselarasan tren:
+- **1 Jam (1h)**: Untuk momentum jangka pendek dan presisi entri.
+- **Harian (1d)**: Untuk tren utama dan pengaturan swing trading.
+- **Mingguan (1wk)**: Untuk konfirmasi tren jangka panjang.
 
-### 2. Technical Indicators & Voting System
-A consensus-based algorithm aggregates signals from multiple technical indicators to generate a final BUY, SELL, or NEUTRAL recommendation. The indicators include:
-- **RSI (Relative Strength Index)**: Identifies overbought and oversold conditions.
-- **MACD (Moving Average Convergence Divergence)**: Detects trend potential and reversals.
-- **EMA (Exponential Moving Average)**: Analyzes trend direction using EMA 20 and EMA 50 crossovers.
-- **Bollinger Bands**: Measures volatility and potential price breakouts.
-- **Stochastic Oscillator**: Identifies momentum shifts.
+### 2. Indikator Teknikal & Sistem Voting
+Algoritma berbasis konsensus mengagregasi sinyal dari berbagai indikator teknikal untuk menghasilkan rekomendasi akhir BELI (BUY), JUAL (SELL), atau NETRAL. Indikator yang digunakan meliputi:
+- **RSI (Relative Strength Index)**: Mengidentifikasi kondisi jenuh beli dan jenuh jual.
+- **MACD (Moving Average Convergence Divergence)**: Mendeteksi potensi tren dan pembalikan arah.
+- **EMA (Exponential Moving Average)**: Menganalisis arah tren menggunakan persilangan EMA 20 dan EMA 50.
+- **Bollinger Bands**: Mengukur volatilitas dan potensi penembusan harga (breakout).
+- **Stochastic Oscillator**: Mengidentifikasi pergeseran momentum.
 
-### 3. Fundamental Analysis
-Integrates key fundamental metrics to validate technical setups:
-- Valuation Ratios (P/E, PEG, Price to Book).
-- Profitability Metrics (ROE, Profit Margin).
-- Financial Health (Debt-to-Equity, Current Ratio).
-- Analyst Ratings and Price Targets.
+### 3. Analisis Fundamental
+Mengintegrasikan metrik fundamental utama untuk memvalidasi pengaturan teknikal:
+- Rasio Valuasi (P/E, PEG, Price to Book).
+- Metrik Profitabilitas (ROE, Margin Keuntungan).
+- Kesehatan Finansial (Debt-to-Equity, Current Ratio).
+- Rating Analis dan Target Harga.
 
-### 4. Backtesting Engine
-Includes a historical simulation feature allowing users to test strategy performance with customizable risk management parameters:
-- Adjustable Take Profit and Stop Loss percentages.
-- Win Rate, Total Return, and Profit/Loss ratio calculation.
-- Detailed trade log generation.
+### 4. Mesin Backtesting
+Mencakup fitur simulasi historis yang memungkinkan pengguna untuk menguji kinerja strategi dengan parameter manajemen risiko yang dapat disesuaikan:
+- Persentase Take Profit dan Stop Loss yang dapat diatur.
+- Perhitungan Win Rate, Total Return, dan rasio Laba/Rugi.
+- Pembuatan log perdagangan terperinci.
 
-### 5. Machine Learning Prediction
-Leverages historical data to predict future price direction using ensemble learning algorithms:
-- **Random Forest Classifier**: Robust non-linear classification.
-- **XGBoost**: Gradient boosting for high-performance predictions.
-- **Feature Importance**: Visualizes which indicators influence the model's decision the most.
+### 5. Prediksi Machine Learning
+Memanfaatkan data historis untuk memprediksi arah harga di masa depan menggunakan algoritma ensemble learning:
+- **Random Forest Classifier**: Klasifikasi non-linear yang kuat.
+- **XGBoost**: Gradient boosting untuk prediksi berkinerja tinggi.
+- **Feature Importance**: Memvisualisasikan indikator mana yang paling mempengaruhi keputusan model.
 
-## Technology Stack
+## Teknologi yang Digunakan
 
-- **Core**: Python
-- **Interface**: Streamlit
+- **Inti**: Python
+- **Antarmuka**: Streamlit
 - **Data**: yfinance
-- **Analysis**: pandas, numpy, pandas-ta
-- **Visualization**: Plotly
+- **Analisis**: pandas, numpy, pandas-ta
+- **Visualisasi**: Plotly
 - **Machine Learning**: scikit-learn, xgboost
 
-## Installation
+## Instalasi
 
-1. Clone the repository:
+1. Clone repositori:
    ```bash
    git clone https://github.com/kei2511/app-analisis-saham.git
    cd app-analisis-saham
    ```
 
-2. Install the required dependencies:
+2. Install dependensi yang diperlukan:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+3. Jalankan aplikasi:
    ```bash
-   streamlit run app.py
+   python -m streamlit run app.py
    ```
+   *Catatan: Jika perintah `streamlit` tidak dikenali, gunakan `python -m streamlit run app.py`.*
 
-## Usage
+## Penggunaan
 
-1. Enter a valid stock ticker in the sidebar (e.g., BBCA.JK for Indonesian stocks or AAPL for US stocks).
-2. View the Multi-Timeframe Analysis table for an immediate signal summary.
-3. Analyze the interactive charts to visualize price action and indicators.
-4. Run the Backtest module to verify strategy performance on historical data.
-5. Check the Machine Learning section for predictive insights on the next market session.
+1. Masukkan kode saham yang valid di sidebar (contoh: BBCA.JK untuk saham Indonesia atau AAPL untuk saham AS).
+2. Lihat tabel Analisis Multi-Timeframe untuk ringkasan sinyal langsung.
+3. Analisis grafik interaktif untuk memvisualisasikan aksi harga dan indikator.
+4. Jalankan modul Backtest untuk memverifikasi kinerja strategi pada data historis.
+5. Periksa bagian Machine Learning untuk wawasan prediktif pada sesi pasar berikutnya.
 
-## License
+## Lisensi
 
-This project is open source and available under the MIT License.
+Proyek ini bersifat open source dan tersedia di bawah Lisensi MIT.
